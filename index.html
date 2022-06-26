@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sum App</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body id="body">
+        <center>
+            <h1>Sum App</h1>
+        <p>In this app, you can enter two numbers, and the sum of all numbers from and including those numbers will come up. Make sure to enter them in ascending order.</p>
+        <div>
+            <input type="number" id="input1">
+            <input type="number" id="input2">
+        </div>
+        <h5 id="showResult"></h5>
+        <button onclick=calculate()>Calculate</button>
+
+        <script>
+            function calculate(){
+                var no1 = document.getElementById("input1").value;
+                var no2 = document.getElementById("input2").value;
+                console.log(no1);
+                console.log(no2);
+
+                var numberOfNumbers = no2 - no1 + 1;
+                console.log(numberOfNumbers);
+
+                var sum = Number(no1)+Number(no2);
+                console.log(sum);
+
+                var pre = numberOfNumbers * sum;
+                console.log(pre);
+
+                var finalans = pre / 2;
+                console.log(finalans);
+                document.getElementById("showResult").innerHTML = finalans;
+            }
+        </script>
+
+    </center>
+    </body>
+</html>
